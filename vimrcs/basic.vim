@@ -224,6 +224,10 @@ map <c-space> ?
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+" Set vertical splits to go to the right
+set splitright
+set splitbelow
+
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
