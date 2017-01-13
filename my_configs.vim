@@ -10,4 +10,6 @@ set shiftwidth=2
 set expandtab
 set relativenumber 
 set number   
-command VR vertical resize 160
+command VR vertical resize 120
+nnoremap <leader>a :<C-u>Unite -no-split -buffer-name=buffer  -start-insert grep:.<CR>
+
