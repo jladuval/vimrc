@@ -13,3 +13,21 @@ set number
 command VR vertical resize 120
 nnoremap <leader>a :<C-u>Unite -no-split -buffer-name=buffer  -start-insert grep:.<CR>
 
+" Let's use pt
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts =
+      \ '-i --vimgrep --hidden --nocolor --nogroup
+      \ --ignore ''bower_components'' --ignore ''.svn'' --ignore ''.git'' --ignore ''node_modules'''
+let g:unite_source_grep_recursive_opt = ''
+let g:unite_source_grep_encoding = 'utf-8'
+
+" Custom mappings for the unite buffer
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  " Enable navigation with control-j and control-k in insert mode
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  " Reload directory contents
+  imap <buffer> <C-r>   <Plug>(unite_redraw)
+endfunction
+
