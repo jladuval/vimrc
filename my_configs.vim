@@ -11,7 +11,10 @@ set expandtab
 set relativenumber 
 set number   
 command VR vertical resize 120
-nnoremap <leader>a :<C-u>Unite -no-split -buffer-name=buffer  -start-insert grep:.<CR>
+nnoremap <leader>a :<C-u>Unite -buffer-name=search -start-insert grep:.<CR>
+nnoremap <leader>t :FZF<CR>
+set rtp+=/usr/local/opt/fzf
+nnoremap <leader>cd :cd %:p:h<CR>
 
 " Let's use pt
 let g:unite_source_grep_command = 'ag'
