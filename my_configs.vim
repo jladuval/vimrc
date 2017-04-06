@@ -10,6 +10,8 @@ set shiftwidth=2
 set expandtab
 set relativenumber 
 set number   
+set timeoutlen=1000 ttimeoutlen=0
+
 command VR vertical resize 120
 nnoremap <leader>a :<C-u>Unite -buffer-name=search -start-insert grep:.<CR>
 nnoremap <leader>t :FZF<CR>
