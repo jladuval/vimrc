@@ -18,6 +18,8 @@ nnoremap <leader>t :FZF<CR>
 set rtp+=/usr/local/opt/fzf
 nnoremap <leader>cd :cd %:p:h<CR>
 
+nnoremap <leader>f :noh<CR>
+
 " Let's use pt
 let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts =
