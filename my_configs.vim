@@ -23,6 +23,7 @@ set number
 set timeoutlen=1000 ttimeoutlen=0
 
 command VR vertical resize 120
+command Q q!
 nnoremap <leader>a :<C-u>Unite -buffer-name=search -start-insert grep:.<CR>
 nnoremap <leader>t :FZF<CR>
 set rtp+=/usr/local/opt/fzf
