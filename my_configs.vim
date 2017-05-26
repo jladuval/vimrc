@@ -25,11 +25,19 @@ set timeoutlen=1000 ttimeoutlen=0
 command VR vertical resize 120
 command Q q!
 nnoremap <leader>a :<C-u>Unite -buffer-name=search -start-insert grep:.<CR>
+"FZF
 nnoremap <leader>t :FZF<CR>
 set rtp+=/usr/local/opt/fzf
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 nnoremap <leader>cd :cd %:p:h<CR>
 
 nnoremap <leader>f :noh<CR>
+
+" Enter for select in YCM
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 " Let's use pt
 let g:unite_source_grep_command = 'ag'
