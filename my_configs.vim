@@ -36,6 +36,8 @@ nnoremap <leader>cd :cd %:p:h<CR>
 
 nnoremap <leader>f :noh<CR>
 
+nnoremap <leader>= mzgg=G`z<CR>
+
 " Enter for select in YCM
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
